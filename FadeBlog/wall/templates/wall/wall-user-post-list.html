@@ -1,0 +1,16 @@
+{% extends "main_base.html" %}
+{% block title %}Профиль {{post_list.0.user}}{% endblock %}
+{% block content %}
+
+<div id="content">
+   <p>
+       Посты пользователей, на которых вы подписаны:
+   </p>
+    {% for el in post_list %}
+    <p>
+        {{el.user}} пишет:
+        <a href="{%url 'post-detail' el.id%}">{{el.title}}</a>
+    </p>
+    {%endfor%}
+</div>
+{% endblock %}

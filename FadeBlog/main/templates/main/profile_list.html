@@ -1,0 +1,16 @@
+{% extends "main_base.html" %}
+{% block title %}Список пользователей{% endblock %}
+{% block content %}
+<div id="content">
+    <p>
+        Список пользователей:
+    </p>
+    {%for el in profile_list%}
+        {%if el.username != user.username%}
+             <p>
+                    <a href="{%url 'an-user-post-list' el.id%}">{{el.username}}</a>
+             </p>
+        {%endif%}
+    {%endfor%}
+</div>
+{% endblock %}

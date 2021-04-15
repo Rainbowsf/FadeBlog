@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<div id="sidebar">
+    <a href="{%url 'user-post-list'%}"><p>Мои посты</p></a>
+    <a href="{%url 'wall-user-post-list'%}"><p>Стена</p></a>
+    <a href="{%url 'user_list'%}"><p>Юзеры</p></a>
+    <a href="{%url 'logout'%}"><p>Выйти из аккаунта</p></a>
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

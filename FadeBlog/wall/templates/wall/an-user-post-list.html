@@ -1,0 +1,19 @@
+{% extends "main_base.html" %}
+{% block title %}Профиль {{post_list.0.user}}{% endblock %}
+{% block content %}
+
+<div id="content">
+    Посты пользователя {{post_list.0.user.id}}
+    {%if follower.user_id == post_list.0.user.id and follower.following_user_id == user.id%}
+        <button>Подписаться</button>
+    {%else%}
+    {{follower.user_id}}{{post_list.0.user.id}}
+        <button>Отписаться</button>
+    {%endif%}
+    {% for el in post_list %}
+    <p>
+        <a href="{%url 'post-detail' el.id%}">{{el.title}}</a>
+    </p>
+    {%endfor%}
+</div>
+{% endblock %}

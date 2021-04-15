@@ -1,0 +1,17 @@
+{% extends "main_base.html" %}
+{% block title %}Ваш профиль{% endblock %}
+{% block content %}
+<div id="content">
+
+    <p>
+        Ваши посты:
+    </p>
+    {%for el in posts%}
+        <p>
+           <a href="{%url 'post-detail' el.id%}">{{el.title}}</a>
+        </p>
+    {%endfor%}
+
+    <a href="{%url 'post-create'%}"><button>Добавить пост:</button></a>
+</div>
+{% endblock %}
