@@ -2,7 +2,7 @@
 
 О проекте:
 
-Создана на Django 3.2(Python) и голом HTML,  с использованием ClassBasedViews, установленны: Pillow, asgiref, django-crispy-forms, pip, pytz, setuptools, sqlparse. Database:sqlite
+Создан на Django 3.2(Python) и голом HTML,  с использованием ClassBasedViews, установленны: Pillow, asgiref, django-crispy-forms, pip, pytz, setuptools, sqlparse. Database:sqlite
 
 В данной социальной сети подключены модели: Users(стандартная), Posts(обычная модель поста - заголовок, текст, автор, дата), followers(2 ключа - пользователь который подписывается и пользователь на которого подписываются, пока не до конца настроена)
 
